@@ -11,7 +11,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 export default function ActionAreaCard( props ) {
-    const { name, vendor, price, tags, wilaya }  = props;
+    const { name, vendor, price, tags, location, image }  = props;
 
     function createChips(tags) {
       const tagChips = tags.map((value) => {
@@ -44,7 +44,7 @@ export default function ActionAreaCard( props ) {
           <CardMedia
             component="img"
             height="190"
-            image="https://i.cbc.ca/1.7016575.1698947774!/fileImage/httpImage/new-coke-bottles.jpg"
+            image={image}
             alt={name}
           />
           <CardContent>
@@ -68,7 +68,7 @@ export default function ActionAreaCard( props ) {
                 <Grid container direction="row" alignItems='center'>
                   <LocationOnIcon color="primary" />
                   <Typography variant="body1">
-                    {wilaya}
+                    {location}
                   </Typography>
                 </Grid>
               </Box>
